@@ -65,6 +65,7 @@ body {
     background-color: gray;
     color: white;
     cursor: pointer;
+    font-size: 20px;
 }
 .todos-container{
     width: 100%;

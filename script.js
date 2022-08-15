@@ -18,7 +18,7 @@ else{
 function addTodo(){
     
     if(addTodoInput.value.length < 3){
-        message.innerHTML = "Please enter some text";
+        message.innerHTML = "Please enter some text whose character count is greater than 3";
     }
     else{
 
@@ -58,12 +58,19 @@ function addTodo(){
             }
         })
 
+        // Eventlistener for addTodoInput
+        addTodoInput.addEventListener("keydown", ()=>{
+            message.innerHTML="";
+        })
+
         // Add children to parent element
         todoItem.appendChild(todoText);
         todoItem.appendChild(todoRemoveButton);
         todosContainer.appendChild(todoItem);
 
+        //Clear 
         addTodoInput.value="";
+        message.innerHTML=""
     }
 }
 
